@@ -1,0 +1,23 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "disease-graph-backend.js",
+            "use": "@vercel/node"
+        },
+        {
+            "src": "disease-graph.html",
+            "use": "@vercel/static"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/backend",
+            "dest": "disease-graph-backend.js"
+        },
+        {
+            "src": "/",
+            "dest": "disease-graph.html"
+        }
+    ]
+}
